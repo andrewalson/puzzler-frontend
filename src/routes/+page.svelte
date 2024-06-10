@@ -1,2 +1,10 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+	const addUser = () => {
+		window.fetch('http://localhost:8080/user', {
+			method: 'POST'
+		});
+		alert('User added');
+	};
+</script>
+
+<button on:click={addUser}>Create Account</button>
